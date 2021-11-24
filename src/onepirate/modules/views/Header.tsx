@@ -17,10 +17,10 @@ const item: SxProps<Theme> = {
 };
 //Given statisctical data
 const currentMembers = 1446971;
-const currentMembersDate = new Date("12.31.2020 23:59:59");
+const currentMembersDate = Date.parse("2020-12-31T23:59:59")
 //const expectedMembers = 800000;
 const expectedMembers = 1200000;
-const expectedMembersDate = new Date("12.31.2035 23:59:59")
+const expectedMembersDate = Date.parse("2035-12-31T23:59:59")
 //const expectedMembersDate = new Date ("12.31.2060 23:59:59");
 
 
