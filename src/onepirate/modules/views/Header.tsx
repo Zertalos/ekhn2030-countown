@@ -6,8 +6,6 @@ import {Box} from "@mui/material";
 import Grid from "@mui/material/Grid";
 import {SxProps} from "@mui/system";
 import {Theme} from "@mui/material/styles";
-const backgroundImage =
-  'https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&w=1400&q=80';
 
 const item: SxProps<Theme> = {
   display: 'flex',
@@ -70,17 +68,11 @@ let durationMemberCounter = 0.25;
   return (
     <ProductHeroLayout
       sxBackground={{
-        // backgroundImage: `url(${backgroundImage})`,
         backgroundColor: '#7630b0', // Average color of the background image.
         backgroundPosition: 'center',
       }}
     >
-      {/* Increase the network loading priority of the background image. */}
-{/*      <img
-        style={{ display: 'none' }}
-        src={backgroundImage}
-        alt="increase priority"
-      />*/}
+
       <Typography
           color="inherit"
           align="center"
@@ -105,16 +97,7 @@ let durationMemberCounter = 0.25;
       >
         Die EKHN verliert Mitglieder...
     </Typography>
-      {/*        <Button
-        color="secondary"
-        variant="contained"
-        size="large"
-        component="a"
-        href="/premium-themes/onepirate/sign-up/"
-        sx={{ minWidth: 200 }}
-      >
-        Register
-      </Button>*/}
+
       <Grid container spacing={5}>
         <Grid item xs={12} md={4}>
           <Box sx={item}>

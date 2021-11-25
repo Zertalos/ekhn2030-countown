@@ -55,7 +55,7 @@ function ProductValues() {
               </Typography>
                 <Typography variant="h5" paragraph={true}>
                 {
-                  'Dabei sinken nicht nur die Anzahl der Mitglieder, sondern auch die, durch die Kirchenmitglieder, gezahlte Kirchensteuer.'
+                  'Dabei sinken nicht nur die Anzahl der Mitglieder, sondern auch die durch die Kirchenmitglieder gezahlte Kirchensteuer. Diese Veränderung wird die Kirchengemeinden schon Mittelfristig signifikant beeinträchtigen.'
                 }
               </Typography>
               <Button
@@ -122,7 +122,7 @@ function ProductValues() {
                 Was bedeutet das?
               </Typography>
               <Typography variant="h5" paragraph={true}>
-                {'Kirchliches Handeln muss sich auf neue Strukturen einstellen. Das gilt nicht nur für die Evangelische Kirche in Hessen und Nassau sondern für alle Gliedkirchen der Evangelischen Kirche in Deutschland.'
+                {'Kirchliches Handeln muss sich auf neue Strukturen einstellen. Das gilt nicht nur für die EKHN sondern für alle Gliedkirchen der Evangelischen Kirche in Deutschland.'
                 }
               </Typography>
                 <Typography variant="h5" paragraph={true}>
@@ -144,7 +144,7 @@ function ProductValues() {
                   </ListItem>
                 </List>
                 <Typography variant="h5" paragraph={true}>
-                  Als Zielbild für den aktuell laufenden Prozess wurde die Kirche in 20 Jahren gewählt. In Anlehnung wurdeh der Prozess, mit allen notwendigen Entscheidungen, EKHN2030 genannt.
+                  Als Zielbild für den aktuell laufenden Prozess wurde die Kirche in 20 Jahren gewählt. In Anlehnung wurde der Prozess, mit allen notwendigen Entscheidungen, EKHN2030 genannt.
               </Typography>
 
               <Button
