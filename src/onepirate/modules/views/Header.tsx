@@ -6,6 +6,7 @@ import {Box} from "@mui/material";
 import Grid from "@mui/material/Grid";
 import {SxProps} from "@mui/system";
 import {Theme} from "@mui/material/styles";
+import { useMatomo } from '@datapunt/matomo-tracker-react'
 
 const item: SxProps<Theme> = {
   display: 'flex',
@@ -47,6 +48,7 @@ export default function Header() {
 
   const secondsPerMemberLost = Math.abs(1/m)/1000;
 
+  const { trackPageView, trackEvent } = useMatomo()
 
   const tick = () => {
     if (stateSeconds.valueOf() > 0){
@@ -54,7 +56,7 @@ export default function Header() {
     }else{
       setSeconds(secondsPerMemberLost);
       setMembers(stateMembers -1);
-      console.log("lost 1 member");
+      trackEvent({ category: 'ekhn2030-counter', action: 'member-lost-watched' })
     }
     startMemberCounter = calcMembers(new Date());
   };
@@ -62,6 +64,10 @@ export default function Header() {
   React.useEffect(() => {
     const timerId = setInterval(() => tick(), 1000);
     return () => clearInterval(timerId);
+    trackPageView({
+      documentTitle: 'Home', // optional
+      href: 'https://www.ekhn2030.de', // optional
+    });
   });
 let startMemberCounter = 0;
 let durationMemberCounter = 0.25;
