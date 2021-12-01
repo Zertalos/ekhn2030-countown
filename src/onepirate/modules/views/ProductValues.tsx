@@ -8,6 +8,7 @@ import Typography from '../components/Typography';
 import Button from "../components/Button";
 import List from '@mui/material/List';
 import {ListItem} from "@mui/material";
+import { useMatomo } from '@datapunt/matomo-tracker-react'
 
 const item: SxProps<Theme> = {
   display: 'flex',
@@ -17,6 +18,7 @@ const item: SxProps<Theme> = {
 };
 
 function ProductValues() {
+  const { trackEvent } = useMatomo()
   return (
     <Box
       component="section"
@@ -65,6 +67,7 @@ function ProductValues() {
                   sx={{ width: '100%', my: 5}}
                   href="https://www.ekhn.de/ueber-uns/daten-fakten.html"
                   target="_blank"
+                  onClick={() => {trackEvent({ category: 'daten-fakten', action: 'click-event' })}}
               >
                 Kleine Statistik der EKHN
               </Button>
@@ -104,6 +107,7 @@ function ProductValues() {
                   sx={{ width: '100%', my: 5}}
                   href="https://www.ekhn.de/aktuell/detailmagazin/news/mitgliederstudie-zahlen-zum-nachdenken.html"
                   target="_blank"
+                  onClick={() => {trackEvent({ category: 'studie-infos', action: 'click-event' })}}
               >
                 Zur Studie
               </Button>
@@ -154,6 +158,8 @@ function ProductValues() {
                   sx={{ width: '100%', my: 5}}
                   href="https://unsere.ekhn.de/themen/ekhn2030.html"
                   target="_blank"
+                  onClick={() => {trackEvent({ category: 'ekhn2030-infos', action: 'click-event' })}}
+
               >
                 Infos zu EKHN2030
               </Button>

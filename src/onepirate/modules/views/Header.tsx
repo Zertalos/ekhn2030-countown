@@ -50,6 +50,11 @@ export default function Header() {
 
   const { trackPageView, trackEvent } = useMatomo()
 
+  trackPageView({
+    documentTitle: 'Home', // optional
+    href: 'https://www.ekhn2030.de', // optional
+  });
+
   const tick = () => {
     if (stateSeconds.valueOf() > 0){
       setSeconds(stateSeconds -1);
@@ -62,10 +67,7 @@ export default function Header() {
   };
 
   React.useEffect(() => {
-    trackPageView({
-      documentTitle: 'Home', // optional
-      href: 'https://www.ekhn2030.de', // optional
-    });
+
     const timerId = setInterval(() => tick(), 1000);
     return () => clearInterval(timerId);
   });
