@@ -38,7 +38,7 @@ function calcMembers(date: Date){
 function timeTillNextMemberLost(date: Date){
   let y = Math.floor(calcMembers(date));
   let timeSpan = ((y - b) / m) - date.valueOf();
-  console.log("TS: " + Math.round(timeSpan/1000));
+  //console.log("TS: " + Math.round(timeSpan/1000));
   return Math.round(timeSpan/1000);
 }
 

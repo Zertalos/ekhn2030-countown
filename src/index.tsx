@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { MatomoProvider, createInstance } from '@datapunt/matomo-tracker-react'
 
 const instance = createInstance({
-    urlBase: 'https://root.zockfreunde.de:8081',
+    urlBase: 'https://matomo.zockfreunde.de',
     siteId: 1,
     // trackerUrl: 'https://ekhn2030.de/tracking.php', // optional, default value: `${urlBase}matomo.php`
     // srcUrl: 'https://www.ekhn2030.de/tracking.js', // optional, default value: `${urlBase}matomo.js`
