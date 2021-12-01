@@ -62,12 +62,12 @@ export default function Header() {
   };
 
   React.useEffect(() => {
-    const timerId = setInterval(() => tick(), 1000);
-    return () => clearInterval(timerId);
     trackPageView({
       documentTitle: 'Home', // optional
       href: 'https://www.ekhn2030.de', // optional
     });
+    const timerId = setInterval(() => tick(), 1000);
+    return () => clearInterval(timerId);
   });
 let startMemberCounter = 0;
 let durationMemberCounter = 0.25;

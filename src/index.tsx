@@ -26,9 +26,8 @@ const instance = createInstance({
 ReactDOM.render(
   <React.StrictMode>
       <MatomoProvider value={instance}>
-    <App />
+      <App />
       </MatomoProvider>
-
   </React.StrictMode>,
   document.getElementById('root')
 );
