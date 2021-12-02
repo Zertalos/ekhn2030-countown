@@ -18,7 +18,11 @@ const item: SxProps<Theme> = {
 };
 
 function ProductValues() {
-  const { trackEvent } = useMatomo()
+  const { trackEvent, trackPageView } = useMatomo()
+  trackPageView({
+    documentTitle: 'Home', // optional
+    href: 'https://www.ekhn2030.de', // optional
+  });
   return (
     <Box
       component="section"

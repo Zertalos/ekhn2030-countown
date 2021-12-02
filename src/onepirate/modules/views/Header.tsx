@@ -50,10 +50,7 @@ export default function Header() {
 
   const { trackPageView, trackEvent } = useMatomo()
 
-  trackPageView({
-    documentTitle: 'Home', // optional
-    href: 'https://www.ekhn2030.de', // optional
-  });
+
 
   const tick = () => {
     if (stateSeconds.valueOf() > 0){
